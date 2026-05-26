@@ -14,12 +14,14 @@ app.get('/',(req,res)=>{
     res.send('server started')
 })
 
+const PORT = 66;
+
 connectDB()
 .then(()=>{
     console.log('db connected successfully')
-    app.listen(66,()=>{
-        console.log('server started')
-    })
+    app.listen(PORT, "0.0.0.0", () => {
+        console.log(`server started on port ${PORT}`);
+    });
 })
 .catch(()=>{
     console.log('db connection failed please check')
