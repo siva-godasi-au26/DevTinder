@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
     res.send('server started')
 })
 
-const PORT = 66;
+const PORT = 3001;
 
 connectDB()
 .then(()=>{
